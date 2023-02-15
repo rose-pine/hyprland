@@ -21,6 +21,12 @@
     - `col.active_border = $rose $pine 90deg`
     - `col.inactive_border = $muted`
 
+
+
+## Gallery
+
+![Rosé Pine with Hyprland](https://i.imgur.com/I9XBM6n.png)
+
 ## Thanks to
 
 - [jishnu](https://github.com/jishnurajendran)
