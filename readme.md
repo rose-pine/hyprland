@@ -29,4 +29,4 @@
 
 ## Thanks to
 
-- [jishnu](https://github.com/jishnurajendran)
+- [jishnurajendran](https://github.com/jishnurajendran)
