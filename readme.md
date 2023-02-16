@@ -20,7 +20,7 @@
 3. When using the colors, use $COLOR e.g. $base
     - `col.active_border = $rose $pine 90deg`
     - `col.inactive_border = $muted`
-
+    (Use favourite Rosé Pine accent as listed in .conf file)
 
 
 ## Gallery
