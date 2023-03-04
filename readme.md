@@ -13,10 +13,10 @@
 
 ## Usage
 
-1. Download the file with your desired flavour e.g. rosepineMoon.conf
+1. Download the file with your desired flavour e.g. rose-pine-moon.conf
 2. Copy it into your hyprland config e.g. ~/.config/hypr/
     Include the file at the top of your hyprland.conf
-    - `source=~/.config/hypr/rosepineMoon.conf`
+    - `source=~/.config/hypr/rose-pine-moon.conf`
 3. When using the colors, use $COLOR e.g. $base
     - `col.active_border = $rose $pine 90deg`
     - `col.inactive_border = $muted`
