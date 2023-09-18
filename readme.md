@@ -18,9 +18,12 @@
     Include the file at the top of your hyprland.conf
     - `source=~/.config/hypr/rose-pine-moon.conf`
 3. When using the colors, use $COLOR e.g. $base
-    - `col.active_border = $rose $pine 90deg`
+    - `col.active_border = $rose`
     - `col.inactive_border = $muted`
     (Use favourite Rosé Pine accent as listed in .conf file)
+    - If you are looking for a sweet animated window border 
+    - `col.active_border = $rose $pine $love $iris 90deg`
+        (You can remove or add colors as you wish)
 
 
 ## Gallery
