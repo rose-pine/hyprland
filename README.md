@@ -15,6 +15,11 @@
 Both usage examples assume the theme has been downloaded into the same directory as the Hyprland configuration file, and show setting gradiented active border and muted inactive border.
 
 ### .lua (<= v0.55)
+
+- [Rosé Pine](./lua/rose-pine.lua)
+- [Rosé Pine Dawn](./lua/rose-pine-dawn.lua)
+- [Rosé Pine Moon](./lua/rose-pine-moon.lua)
+
 Since v0.55, Hyprland has moved on to Lua-based configuration.
 To use any of the themes, just fetch the Lua table, either by requiring or pasting the table directly into the configuration file.
 ```lua
@@ -45,6 +50,11 @@ hl.config({
 ```
 
 ### .conf (> v0.55)
+
+- [Rosé Pine](./conf/rose-pine.conf)
+- [Rosé Pine Dawn](./conf/rose-pine-dawn.conf)
+- [Rosé Pine Moon](./conf/rose-pine-moon.conf)
+
 Source any of the themes (or paste it directly into the file referencing the theme)
 ```conf
 source = ./rose-pine.conf        # default
