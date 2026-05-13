@@ -12,19 +12,54 @@
 </p>
 
 ## Usage
+Both usage examples assume the theme has been downloaded into the same directory as the Hyprland configuration file, and show setting gradiented active border and muted inactive border.
 
-1. Download the file with your desired flavour e.g. rose-pine-moon.conf
-2. Copy it into your hyprland config e.g. ~/.config/hypr/
-    Include the file at the top of your hyprland.conf
-    - `source=~/.config/hypr/rose-pine-moon.conf`
-3. When using the colors, use $COLOR e.g. $base
-    - `col.active_border = $rose`
-    - `col.inactive_border = $muted`
-    (Use favourite Rosé Pine accent as listed in .conf file)
-    - If you are looking for a sweet animated window border 
-    - `col.active_border = $rose $pine $love $iris 90deg`
-        (You can remove or add colors as you wish)
+### .lua (<= v0.55)
+Since v0.55, Hyprland has moved on to Lua-based configuration.
+To use any of the themes, just fetch the Lua table, either by requiring or pasting the table directly into the configuration file.
+```lua
+-- require
+local theme = require("rose-pine")        -- default
+local theme = require("rose-pine-dawn")   -- dawn
+local theme = require("rose-pine-moon")   -- moon
 
+-- pasting default
+local theme = {
+  base          = "#191724",
+  -- and so on ...
+}
+```
+Require paths are relative to "hyprland.lua".
+
+To use it in your config:
+```lua
+-- you can replace active_border with a single color just like inactive_border
+hl.config({
+  general = {
+    col = {
+      active_border = { colors = { theme.rose, theme.pine, theme.love, theme.iris }, angle = 90 },
+      -- active_border = theme.rose
+      inactive_border = theme.muted,
+    },
+})
+```
+
+### .conf (> v0.55)
+Source any of the themes (or paste it directly into the file referencing the theme)
+```conf
+source = ./rose-pine.conf        # default
+source = ./rose-pine-dawn.conf   # dawn
+source = ./rose-pine-moon.conf   # moon
+```
+
+To use it in your config:
+```
+general {
+    col.active_border = $rose $pine $love $iris 90deg
+    # col.active_border = $rose
+    col.inactive_border = $muted
+}
+```
 
 ## Gallery
 
@@ -32,4 +67,6 @@
 
 ## Thanks to
 
-- [jishnurajendran](https://github.com/jishnurajendran)
+- [mvllow](https://github.com/mvllow) (making the theme <3)
+- [jishnurajendran](https://github.com/jishnurajendran) (conf port)
+- [justgoodgame](https://github.com/justgoodgame) (lua port)
