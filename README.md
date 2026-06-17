@@ -1,3 +1,5 @@
+<img width="2560" height="1392" alt="hyprland" src="https://github.com/user-attachments/assets/b56a67bd-2135-4902-a2ae-02c4799ec02a" />
+<img width="2560" height="1392" alt="hyprland" src="https://github.com/user-attachments/assets/5cb35b3c-4109-4eea-8746-b919a6a851be" />
 <p align="center">
     <img src="https://github.com/rose-pine/rose-pine-theme/raw/main/assets/icon.png" width="80" />
     <h2 align="center">Rosé Pine for Hyprland</h2>
@@ -28,7 +30,7 @@
 
 ## Gallery
 
-![Rosé Pine with Hyprland](https://i.imgur.com/I9XBM6n.png)
+![Rosé Pine with Hyprland](https://github.com/user-attachments/assets/5cb35b3c-4109-4eea-8746-b919a6a851be)
 
 ## Thanks to
 
