@@ -3,7 +3,7 @@
     <h2 align="center">Rosé Pine for Hyprland</h2>
 </p>
 
-<p align="center">All natural pine, faux fur and a bit of soho vibes for the classy minimalist.</p>
+<p align="center">All natural pine, faux fur and a bit of soho vibes for the classy minimalist</p>
 
 <p align="center">
     <a href="https://github.com/rose-pine/rose-pine-theme">
@@ -12,63 +12,40 @@
 </p>
 
 ## Usage
-Both usage examples assume the theme has been downloaded into the same directory as the Hyprland configuration file, and show setting gradiented active border and muted inactive border.
 
-### .lua (>= v0.55)
+> For **Hyprland < v0.55**, use the [legacy .conf themes](./dist/legacy/).
 
-- [Rosé Pine](./dist/lua/rose-pine.lua)
-- [Rosé Pine Dawn](./dist/lua/rose-pine-dawn.lua)
-- [Rosé Pine Moon](./dist/lua/rose-pine-moon.lua)
+Download your desired variant to the same location as your Hyprland config (default: `~/.config/hypr/`):
 
-Since v0.55, Hyprland has moved on to Lua-based configuration.
-To use any of the themes, just fetch the Lua table, either by requiring or pasting the table directly into the configuration file.
+- [Rosé Pine](./dist/rose-pine.lua)
+- [Rosé Pine Dawn](./dist/rose-pine-dawn.lua)
+- [Rosé Pine Moon](./dist/rose-pine-moon.lua)
+
+Require and use the theme:
+
 ```lua
--- require
-local theme = require("rose-pine")        -- default
-local theme = require("rose-pine-dawn")   -- dawn
-local theme = require("rose-pine-moon")   -- moon
+-- Path is relative
+local theme = require("rose-pine")
+-- local theme = require("rose-pine-dawn")
+-- local theme = require("rose-pine-moon")
 
--- pasting default
-local theme = {
-  base          = "#191724",
-  -- and so on ...
-}
-```
-Require paths are relative to "hyprland.lua".
-
-To use it in your config:
-```lua
--- you can replace active_border with a single color just like inactive_border
+-- Example config
 hl.config({
-  general = {
-    col = {
-      active_border = { colors = { theme.rose, theme.pine, theme.love, theme.iris }, angle = 90 },
-      -- active_border = theme.rose
-      inactive_border = theme.muted,
-    },
+	general = {
+		col = {
+			active_border = {
+				colors = {
+					theme.rose,
+					theme.pine,
+					theme.love,
+					theme.iris
+				},
+				angle = 90
+			},
+			inactive_border = theme.muted,
+		},
+	},
 })
-```
-
-### .conf (< v0.55)
-
-- [Rosé Pine](./dist/conf/rose-pine.conf)
-- [Rosé Pine Dawn](./dist/conf/rose-pine-dawn.conf)
-- [Rosé Pine Moon](./dist/conf/rose-pine-moon.conf)
-
-Source any of the themes (or paste it directly into the file referencing the theme)
-```conf
-source = ./rose-pine.conf        # default
-source = ./rose-pine-dawn.conf   # dawn
-source = ./rose-pine-moon.conf   # moon
-```
-
-To use it in your config:
-```
-general {
-    col.active_border = $rose $pine $love $iris 90deg
-    # col.active_border = $rose
-    col.inactive_border = $muted
-}
 ```
 
 ## Gallery
@@ -77,6 +54,13 @@ general {
 
 ## Thanks to
 
-- [mvllow](https://github.com/mvllow) (making the theme <3)
 - [jishnurajendran](https://github.com/jishnurajendran) (conf port)
 - [justgoodgame](https://github.com/justgoodgame) (lua port)
+
+<!-- BLOOM_BUILD_START -->
+This theme was built using [bloom](https://github.com/rose-pine/rose-pine-bloom):
+
+```sh
+bloom build template.lua --prefix @
+```
+<!-- BLOOM_BUILD_END -->
