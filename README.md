@@ -13,18 +13,40 @@
 
 ## Usage
 
-1. Download the file with your desired flavour e.g. rose-pine-moon.conf
-2. Copy it into your hyprland config e.g. ~/.config/hypr/
-    Include the file at the top of your hyprland.conf
-    - `source=~/.config/hypr/rose-pine-moon.conf`
-3. When using the colors, use $COLOR e.g. $base
-    - `col.active_border = $rose`
-    - `col.inactive_border = $muted`
-    (Use favourite Rosé Pine accent as listed in .conf file)
-    - If you are looking for a sweet animated window border 
-    - `col.active_border = $rose $pine $love $iris 90deg`
-        (You can remove or add colors as you wish)
+> For **Hyprland < v0.55**, use the [legacy .conf themes](./dist/legacy/).
 
+Download your desired variant to the same location as your Hyprland config (default: `~/.config/hypr/`):
+
+- [Rosé Pine](./dist/rose-pine.lua)
+- [Rosé Pine Dawn](./dist/rose-pine-dawn.lua)
+- [Rosé Pine Moon](./dist/rose-pine-moon.lua)
+
+Require and use the theme:
+
+```lua
+-- Path is relative
+local theme = require("rose-pine")
+-- local theme = require("rose-pine-dawn")
+-- local theme = require("rose-pine-moon")
+
+-- Example config
+hl.config({
+	general = {
+		col = {
+			active_border = {
+				colors = {
+					theme.rose,
+					theme.pine,
+					theme.love,
+					theme.iris
+				},
+				angle = 90
+			},
+			inactive_border = theme.muted,
+		},
+	},
+})
+```
 
 ## Gallery
 
@@ -32,4 +54,13 @@
 
 ## Thanks to
 
-- [jishnurajendran](https://github.com/jishnurajendran)
+- [jishnurajendran](https://github.com/jishnurajendran) (conf port)
+- [justgoodgame](https://github.com/justgoodgame) (lua port)
+
+<!-- BLOOM_BUILD_START -->
+This theme was built using [bloom](https://github.com/rose-pine/rose-pine-bloom):
+
+```sh
+bloom build template.lua --prefix @
+```
+<!-- BLOOM_BUILD_END -->
